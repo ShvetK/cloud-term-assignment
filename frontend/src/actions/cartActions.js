@@ -1,4 +1,3 @@
-// import axios from 'axios';
 import { axiosInstance } from "./axiosI";
 
 import { returnErrors } from "./errorActions";

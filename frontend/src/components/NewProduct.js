@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import "../css/NewProduct.css";
 import { withRouter } from "react-router-dom";
+import { axiosInstance } from "../actions/axiosI";
 
 class NewProduct extends Component {
   constructor(props) {
@@ -80,7 +81,7 @@ class NewProduct extends Component {
 
     const addProduct = async () => {
       try {
-        await axios({
+        await axiosInstance({
           method: "post",
           url: "/api/items",
           data: formData,
