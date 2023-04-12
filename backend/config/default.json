@@ -1,0 +1,5 @@
+{
+  "dbURI": "mongodb+srv://ShvetAnaghan:s0NlrwNK138KQS4m@cluster0.ppqwqqr.mongodb.net/cloudP?retryWrites=true&w=majority",
+  "jwtsecret": "Shvet@123",
+  "StripeAPIKey": "sk_test_51MsnJeIebrCaD2aw3TmHgL0ChKNUuLXU0amsKYyOnmzU4hKcyW2kaK24QUo5ylWhAqr56x4RfYXGdAokVEwuNSvK00BeoBUYku"
+}
