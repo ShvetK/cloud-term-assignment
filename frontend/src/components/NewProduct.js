@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 import "../css/NewProduct.css";
 import { withRouter } from "react-router-dom";
 import { axiosInstance } from "../actions/axiosI";
@@ -81,7 +80,7 @@ class NewProduct extends Component {
 
     const addProduct = async () => {
       try {
-        await axiosInstance({
+        axiosInstance({
           method: "post",
           url: "/api/items",
           data: formData,
@@ -101,7 +100,7 @@ class NewProduct extends Component {
             });
           })
           .catch((error) => {
-            console.log("error is: " + error);
+            console.log(error);
           });
       } catch (error) {
         console.log(error);

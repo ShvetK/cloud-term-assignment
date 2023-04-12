@@ -1,4 +1,5 @@
 import { axiosInstance } from "./axiosI";
+import axios from "axios";
 
 import {
   GET_ITEMS,
@@ -37,23 +38,23 @@ export const addItem = (item) => (dispatch) => {
       dispatch(returnErrors(err.response.data, err.response.status))
     );
 
-  const ApiUrl =
-    "https://gqy3s0g1m2.execute-api.us-east-1.amazonaws.com/developement";
-  axiosInstance({
-    method: "post",
-    url: ApiUrl,
-    data: {
-      orderId: "123456789",
-      userEmail: "shvetanghan@gmail.com",
-    },
-    headers: {
-      "Content-type": "application/json",
-    },
-  })
-    .then((res) => {})
-    .catch((error) => {
-      console.log(error);
-    });
+  // const ApiUrl =
+  //   "https://gqy3s0g1m2.execute-api.us-east-1.amazonaws.com/developement";
+  // axios({
+  //   method: "post",
+  //   url: ApiUrl,
+  //   data: {
+  //     orderId: ``,
+  //     userEmail: "shvetanghan@gmail.com",
+  //   },
+  //   headers: {
+  //     "Content-type": "application/json",
+  //   },
+  // })
+  //   .then((res) => {})
+  //   .catch((error) => {
+  //     console.log(error);
+  //   });
 };
 
 export const deleteItem = (id) => (dispatch) => {

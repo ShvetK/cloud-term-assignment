@@ -1,6 +1,7 @@
 const Item = require("../models/Item");
 require("dotenv").config();
 const AWS = require("aws-sdk");
+const axios = require("axios");
 
 AWS.config.update({
   region: process.env.REGION,
@@ -18,6 +19,7 @@ module.exports.get_items = (req, res) => {
 };
 
 module.exports.post_item = (req, res) => {
+  console.log("Hiiiii this is working...........................");
   const { title, description, category, price } = req.body;
 
   const image = String(Date.now() + req.file.originalname);
@@ -42,29 +44,29 @@ module.exports.post_item = (req, res) => {
         .save()
         .then((item) => res.json(item))
         .catch((error) => console.log(error));
-    }
-  });
 
-  const apiUrl =
-    "https://eawleioq74.execute-api.us-east-1.amazonaws.com/deployment/mailsend";
+      const apiUrl =
+        "https://eawleioq74.execute-api.us-east-1.amazonaws.com/deployment/mailsend";
 
-  axios
-    .post(apiUrl, {
-      userEmail: "shvetanghan@gmail.com",
-      subject: `The new Item is Added Succesfull and Item id is ${newItem._id}`,
-      text: `  
+      axios
+        .post(apiUrl, {
+          userEmail: "shvetanghan@gmail.com",
+          subject: `The new Item is Added Succesfull and Item id is ${newItem._id}`,
+          text: `  
     you added a new Item.
     item title: ${newItem.title}
     item price: ${newItem.price}`,
-    })
-    .then((response) => {
-      // handle success
-      console.log(response.data);
-    })
-    .catch((error) => {
-      // handle error
-      console.log("Email successfully sent");
-    });
+        })
+        .then((response) => {
+          // handle success
+          console.log(response.data);
+        })
+        .catch((error) => {
+          // handle error
+          console.log("Email successfully sent");
+        });
+    }
+  });
 };
 
 module.exports.update_item = (req, res) => {
