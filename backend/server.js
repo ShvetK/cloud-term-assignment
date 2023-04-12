@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
+const cors = require("cors");
 
 const secretFun = require("./config/config");
 const authRoutes = require("./routes/auth");
@@ -10,6 +11,8 @@ const orderRoutes = require("./routes/order");
 
 const app = express();
 app.use(express.json());
+app.use(cors());
+
 app.use("/Images", express.static("Assets/Images"));
 
 app.use("/api", authRoutes);
@@ -26,7 +29,7 @@ if (process.env.NODE_ENV === "production") {
 const Db = async () => {
   const sData = await secretFun();
   const dbURI = sData.dbURI;
-  const port = process.env.PORT || 4000;
+  const port = process.env.PORT || 7001;
   mongoose
     .connect(dbURI, {
       useNewUrlParser: true,

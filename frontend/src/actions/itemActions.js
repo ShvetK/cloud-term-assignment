@@ -1,4 +1,5 @@
-import axios from "axios";
+import { axiosInstance } from "./axiosI";
+// import axios from "axios";
 import {
   GET_ITEMS,
   ADD_ITEM,
@@ -10,7 +11,7 @@ import { returnErrors } from "./errorActions";
 
 export const getItems = () => (dispatch) => {
   dispatch(setItemsLoading());
-  axios
+  axiosInstance
     .get("/api/items")
     .then((res) =>
       dispatch({
@@ -24,7 +25,7 @@ export const getItems = () => (dispatch) => {
 };
 
 export const addItem = (item) => (dispatch) => {
-  axios
+  axiosInstance
     .post("/api/items", item)
     .then((res) =>
       dispatch({
@@ -38,7 +39,7 @@ export const addItem = (item) => (dispatch) => {
 
   const ApiUrl =
     "https://gqy3s0g1m2.execute-api.us-east-1.amazonaws.com/developement";
-  axios({
+  axiosInstance({
     method: "post",
     url: ApiUrl,
     data: {
@@ -56,7 +57,7 @@ export const addItem = (item) => (dispatch) => {
 };
 
 export const deleteItem = (id) => (dispatch) => {
-  axios
+  axiosInstance
     .delete(`/api/items/${id}`)
     .then((res) =>
       dispatch({
@@ -70,7 +71,7 @@ export const deleteItem = (id) => (dispatch) => {
 };
 
 export const updateItem = (id, item) => (dispatch) => {
-  axios
+  axiosInstance
     .put(`/api/items/${id}`, item)
     .then((res) =>
       dispatch({

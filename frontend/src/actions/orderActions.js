@@ -1,10 +1,12 @@
-import axios from "axios";
+// import axios from "axios";
+import { axiosInstance } from "./axiosI";
+
 import { returnErrors } from "./errorActions";
 import { GET_ORDERS, CHECKOUT, ORDERS_LOADING } from "./types";
 
 export const getOrders = (id) => (dispatch) => {
   dispatch(setOrdersLoading());
-  axios
+  axiosInstance
     .get(`/api/order/${id}`)
     .then((res) =>
       dispatch({
@@ -18,7 +20,7 @@ export const getOrders = (id) => (dispatch) => {
 };
 
 export const checkout = (id, source) => (dispatch) => {
-  axios
+  axiosInstance
     .post(`/api/order/${id}`, { source })
     .then((res) =>
       dispatch({
