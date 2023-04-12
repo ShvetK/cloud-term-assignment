@@ -1,0 +1,180 @@
+/* .formN {
+  display: flex;
+  flex-direction: column;
+}
+
+.lableN {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.textFieldN {
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.buttonN {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+.buttonN:hover {
+  background-color: #0062cc;
+}
+
+.h1N {
+  text-align: center;
+} */
+
+/* .formN {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+.formN h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.lableN {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.textFieldN {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.buttonN {
+  background-color: #4caf50;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.buttonN:hover {
+  background-color: #3e8e41;
+}*/
+
+@media only screen and (max-width: 768px) {
+  .formN {
+    max-width: 100%;
+  }
+}
+
+.innerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 100px;
+  width: 60%;
+  flex-direction: column;
+}
+
+.conI {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .innerDiv {
+  width: 60%  ;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 100px;
+} */
+.formN {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px #ccc;
+}
+
+.h1N {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.lableN {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.textFieldN {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.buttonN {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.buttonN:hover {
+  background-color: #3e8e41;
+}
+
+.centered-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  /* margin-top: 0%; */
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 35px;
+}
