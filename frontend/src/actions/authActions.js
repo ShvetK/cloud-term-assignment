@@ -75,8 +75,8 @@ export const login =
     //request body
     const body = JSON.stringify({ email, password });
 
-    fetch
-      .post("http://3.89.6.118:7001/api/login", body, config)
+    axiosInstance
+      .post("/api/login", body, config)
       .then((res) =>
         dispatch({
           type: LOGIN_SUCCESS,
